@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ColaboradorController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +24,8 @@ Route::get('/', function () {
 Route::resource('dashboard', DashboardController::class);
 
 Route::resource('colaboradores', ColaboradorController::class);
+
+Route::resource('user', UserController::class);
+
+Route::resource('faq', FaqController::class);
 
