@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html class="loading dark-layout"
-    lang="pt-br"
-    data-layout="dark-layout"
-    data-textdirection="ltr">
+<html class="loading dark-layout" lang="pt-br" data-layout="dark-layout" data-textdirection="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-        crossorigin="anonymous">
-    <link rel="sortcut icon"
-        href="{{ url('imagens/LogoSite.png') }}"
-        type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet"
-        href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
-    <script src="https://kit.fontawesome.com/2f204339a4.js"
-        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Zap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="sortcut icon" href="{{ asset('assets/images/logo/LogoSite.png') }}" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <script src="https://kit.fontawesome.com/2f204339a4.js" crossorigin="anonymous"></script>
 
     <!--
         <link rel="stylesheet" href="{{ asset('assets/themes/dark-layout.css') }}">
@@ -34,12 +21,8 @@
         -->
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/vendors/css/vendors.min.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/vendors/css/charts/apexcharts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/css/charts/apexcharts.css') }}">
 
 
 
@@ -47,53 +30,29 @@
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css')}}"> --}}
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/bootstrap.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/bootstrap-extended.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/colors.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/components.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/themes/dark-layout.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/themes/bordered-layout.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/themes/semi-dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/themes/bordered-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/themes/semi-dark-layout.css') }}">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/core/menu/vertical-menu.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/pages/dashboard-ecommerce.css') }}">
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/plugins/charts/chart-apex.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/core/menu/vertical-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/pages/dashboard-ecommerce.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/charts/chart-apex.css') }}">
 
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS--
     <link rel="stylesheet" type="text/css" href="../../../assets/style.css">
     <!-- END: Custom CSS-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="{{ asset('assets/custom.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/custom.css') }}">
 
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> --}}
 
@@ -146,11 +105,11 @@
                 <li class="nav-item dropdown dropdown-user">
                     <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none">
-                            <span class="user-name font-weight-bolder">Nome User</span>
+                            <span class="user-name font-weight-bolder">Nome Usuário</span>
                             <!--<span class="user-status">Admin</span>-->
                         </div>
                         <span class="avatar">
-                            <img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40">
+                            <img class="round" src="{{asset('assets/images/profile/userPlaceholder.png')}}" alt="avatar" height="40" width="40">
                             <!--<span class="avatar-status-online"></span>-->
                         </span>
                     </a>
@@ -187,7 +146,6 @@
             </ul>
         </div>
     </nav>
-
     <!-- END: Header-->
 
     <!-- BEGIN: Main Menu-->
@@ -196,9 +154,9 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand"
-                        href="../../../html/ltr/vertical-menu-template-dark/index.html"><span class="brand-logo">
+                        href="{{ route('dashboard.index') }}"><span class="brand-logo">
                             <img class="text-center logo-sidebar"
-                                src="{{ asset('imagens/LogoSite.png') }}"
+                                src="{{ asset('assets/images/logo/LogoSite.png') }}"
                                 alt="">
                             <h2 class="brand-text">Direct Zap</h2>
                     </a></li>
@@ -219,13 +177,27 @@
 
 
                 <a class=" btn btn-primary btn-block btn-sidebar" href="{{ route('dashboard.index') }}">
-                    <i class="icon-sidebar fas fa-tachometer-alt"></i>
+                    <!--<i class="icon-sidebar fas fa-tachometer-alt"></i>-->
+                    <i class="icon-sidebar" data-feather='airplay'></i>
                     <span class="name-sidebar">Dashboard</span>
 
                 </a>
                 <a class="btn btn-primary btn-block btn-sidebar" href="{{ route('colaboradores.index') }}">
-                    <i class="icon-sidebar fas fa-users"></i>
+                   <!-- <i class="icon-sidebar fas fa-users"></i>-->
+                    <i class="icon-sidebar" data-feather='users'></i>
                     <span class="name-sidebar">Colaboradores</span>
+
+                </a>
+
+                <a class=" btn btn-primary btn-block btn-sidebar" href="{{ route('sales.index') }}">
+                    <!--<i class="icon-sidebar fas fa-shopping-cart"></i>-->
+                    <i class="icon-sidebar" data-feather='shopping-bag'></i>
+                    <span class="name-sidebar">Vendas</span>
+
+                </a>
+                <a class="btn btn-primary btn-block btn-sidebar" href="{{ route('commissions.index') }}">
+                    <i class="icon-sidebar fas fa-comments-dollar"></i>
+                    <span class="name-sidebar">Comissões</span>
 
                 </a>
 
@@ -233,7 +205,8 @@
                     class="btn btn-primary btn-block btn-sidebar"
                     data-toggle="modal"
                     data-target="#PixelModal">
-                    <i class="icon-sidebar far fa-plus-square"></i>
+                    <!--<i class="icon-sidebar far fa-plus-square"></i>-->
+                    <i  class="icon-sidebar" data-feather='plus-square'></i>
                     <span class="name-sidebar">Adicionar Pixel</span>
                 </button>
 
@@ -241,7 +214,8 @@
                     class="btn btn-primary btn-block btn-sidebar"
                     data-toggle="modal"
                     data-target="#gerarCod">
-                    <i class="icon-sidebar fas fa-code"></i>
+                    <!--<i class="icon-sidebar fas fa-code"></i>-->
+                    <i class="icon-sidebar" data-feather='code'></i>
                     <span class="name-sidebar">Gerar Código</span>
                 </button>
 
@@ -249,10 +223,11 @@
                     class="btn btn-primary btn-block btn-sidebar"
                     data-toggle="modal"
                     data-target="#distriCod">
-                    <i class="icon-sidebar fas fa-sitemap"></i>
+                    <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
+                    <i class="icon-sidebar" data-feather='share-2'></i>
                     <span class="name-sidebar">Distribuição </span>
                 </button>
-
+                <!--
                 <button type="button"
                     class="btn btn-primary btn-block btn-sidebar"
                     data-toggle="modal"
@@ -260,11 +235,13 @@
                     <i class="icon-sidebar fas fa-user-lock"></i>
                     <span class="name-sidebar">Mudar Senha </span>
                 </button>
+                -->
 
                 <li class=" has-sub ">
                     <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center"
                         href="#">
-                        <i class="icon-sidebar fas fa-link"></i>
+                        <!--<i class="icon-sidebar fas fa-link"></i>-->
+                        <i class="icon-sidebar" data-feather='link'></i>
 
                         <span class="name-sidebar menu-title text-truncate"
                             data-i18n="Menu Levels">Links</span>
@@ -303,13 +280,11 @@
                     </ul>
                 </li>
 
-                    <button type="button"
-                        class="btn btn-primary btn-block btn-sidebar"
-                        data-toggle="modal"
-                        data-target="#ativarConta">
-                        <i class="icon-sidebar fas fa-user-circle"></i>
-                        <span class="name-sidebar">Ativar Conta </span>
-                    </button>
+                <a href="{{route('admin.index')}}"
+                    class="btn btn-primary btn-block btn-sidebar adm-btn">
+                    <i class="icon-sidebar fas fa-user-cog"></i>
+                    <span class="name-sidebar">Área Administrativa</span>
+                </a>
 
 
             </ul>
@@ -328,11 +303,8 @@
 
                 <section class="" id="background-flutuante">
                     <div class="card principal-row">
-                        <div class="card-header">
-                            @yield('content-header')
-                        </div>
                         <div class="card-body">
-                            @yield('content-body')
+                            @yield('content')
                         </div>
                     </div>
                 </section>
@@ -341,336 +313,336 @@
     </div>
 
      <!-- Modais -->
-  <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id=""> Cadastrar Novo Colaborador </h5>
+    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id=""> Cadastrar Novo Colaborador </h5>
 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-
-          <form method="POST" action="">
-            @csrf
-
-            <div class="form-group">
-              <label for="name">Nome</label>
-
-              <input type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Nome e Sobrenome" required>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             </div>
 
-            <div class="form-group">
-              <label for="message">Mensagem</label>
+            <div class="modal-body">
 
-              <input type="text"
-                    class="form-control"
-                    id="message"
-                    name="message"
-                    placeholder="ex: Olá, John!" required>
-            </div>
+            <form method="POST" action="">
+                @csrf
 
-            <div class="form-group">
-              <label for="phone">Telefone</label>
+                <div class="form-group">
+                <label for="name">Nome</label>
 
-              <input type="text"
-                    class="form-control"
-                    id="phone"
-                    name="phone"
-                    placeholder="ex: 21911112222" required>
-            </div>
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-block">
-                Adicionar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PixelModal" tabindex="-1" aria-labelledby="PixelModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal">
-            Adicionar Pixel
-          </h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form method="post" action="">
-            @csrf
-
-            <div class="form-group">
-              <p class="p-1">Insira abaixo seu Pixel</p>
-
-              <input type="number"
-                    class="form-control"
-                    id="pixel"
-                    name="pixel"
-                    placeholder="Ex: 1282707308773467"
-                    required>
-            </div>
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-block">Salvar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modal_colaboradores">Colaborador</h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form method="POST" action="">
-            @csrf
-
-            <div class="form-group">
-              <label for="name">Nome</label>
-
-              <input type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Nome e Sobrenome">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Mensagem</label>
-
-              <input type="text"
-                    class="form-control"
-                    id="message"
-                    name="message"
-                    placeholder="ex: Olá, John!">
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Telefone</label>
-
-              <input type="text"
-                    class="form-control"
-                    id="phone"
-                    name="phone"
-                    placeholder="ex: 21911112222">
-            </div>
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-block">
-                Adicionar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="distriCod" tabindex="-1" aria-labelledby="distriCod" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal"> Configurações</h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form method="POST" action="">
-            @csrf
-
-            <div class="form-group">
-              <p class="p-1">
-                Olá, insira no campo abaixo o número de vezes que um colaborador será solicitado
-                antes de passar a vez para outro colaborador.
-              </p>
-
-              <input type="number"
-                    class="form-control"
-                    id="times"
-                    name="times"
-                    placeholder="Ex: 1"
-                    required>
-            </div>
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-block">
-                Salvar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="gerarCod" tabindex="-1" aria-labelledby="gerarCod" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal">Adicionar Código</h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form method="POST" action="">
-            @csrf
-
-            <div class="form-group">
-                <div class="col-md-12">
-                  <button type="button" class="btn btn-info btn-block mt-2" id="gera-codigo" onclick="makeCod()">Gerar Código</button>
+                <input type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Nome e Sobrenome" required>
                 </div>
+
+                <div class="form-group">
+                <label for="message">Mensagem</label>
+
+                <input type="text"
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        placeholder="ex: Olá, John!" required>
+                </div>
+
+                <div class="form-group">
+                <label for="phone">Telefone</label>
+
+                <input type="text"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="ex: 21911112222" required>
+                </div>
+
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Adicionar
+                </button>
+                </div>
+            </form>
             </div>
-              <input type="text" class="form-control" id="code" name="code" value="" placeholder="Ex: dr89f"minlength="1">
-
-
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-block">
-                Salvar
-              </button>
-            </div>
-          </form>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="mudarSenha" tabindex="-1" aria-labelledby="mudarSenha" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal">Trocar senha</h5>
+    <div class="modal fade" id="PixelModal" tabindex="-1" aria-labelledby="PixelModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal">
+                Adicionar Pixel
+            </h5>
 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+            <form method="post" action="">
+                @csrf
+
+                <div class="form-group">
+                <p class="p-1">Insira abaixo seu Pixel</p>
+
+                <input type="number"
+                        class="form-control"
+                        id="pixel"
+                        name="pixel"
+                        placeholder="Ex: 1282707308773467"
+                        required>
+                </div>
+
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                </div>
+            </form>
+            </div>
         </div>
-
-        <div class="modal-body">
-
-          <form method="POST" action="">
-            @csrf
-
-            <div class="form-group">
-            <label for="name">Senha Antiga</label>
-              <input type="password"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    placeholder="Senha antiga">
-            </div>
-
-            <div class="form-group">
-            <label for="name">Nova Senha</label>
-              <input type="password"
-                    class="form-control"
-                    id="new-password"
-                    name="new-password"
-                    placeholder="Senha nova">
-            </div>
-
-            <div class="form-group">
-            <label for="name">Confirme a Senha</label>
-              <input type="password"
-                    class="form-control"
-                    id="confirm-password"
-                    name="confirm-password"
-                    placeholder="Confirme a senha nova">
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Trocar senha</button>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="ativarConta" tabindex="-1" aria-labelledby="ativarConta" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal">Ativar Conta</h5>
+    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="modal_colaboradores">Colaborador</h5>
 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="links" tabindex="-1" aria-labelledby="links" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="configModal">Clique nos Links Para copiar</h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form>
-
-            <div class="form-group">
-              <label for="">Link Facebook Ads</label>
-              <input class="link-copy form-control" id="link-face-ads" target="__blank" style="text-decoration: none; font-weight: bold;"
-              href="" data-toggle="tooltip" data-placement="top" title="Link Face ads"
-              value=""  >
-              <button type="button" class="btn btn-primary btn-block"  onclick="copyCodFace()">Copiar Link do face ads</button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             </div>
 
-            <div class="form-group">
-              <label for="">Link Parceria</label>
-              <input class="form-control link-copy" id="link-parceria" target="__blank" style="text-decoration: none; font-weight: bold;"
-              href="" data-toggle="tooltip" data-placement="top" title="Link Parceria"
-              value=""  >
-              <button type="button" class="btn btn-primary btn-block"  onclick="copyCodParceria()">Copiar Link De Parceria</button>
+            <div class="modal-body">
+            <form method="POST" action="">
+                @csrf
+
+                <div class="form-group">
+                <label for="name">Nome</label>
+
+                <input type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Nome e Sobrenome">
+                </div>
+
+                <div class="form-group">
+                <label for="message">Mensagem</label>
+
+                <input type="text"
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        placeholder="ex: Olá, John!">
+                </div>
+
+                <div class="form-group">
+                <label for="phone">Telefone</label>
+
+                <input type="text"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="ex: 21911112222">
+                </div>
+
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Adicionar
+                </button>
+                </div>
+            </form>
             </div>
-          </form>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="distriCod" tabindex="-1" aria-labelledby="distriCod" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal"> Configurações</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+            <form method="POST" action="">
+                @csrf
+
+                <div class="form-group">
+                <p class="p-1">
+                    Olá, insira no campo abaixo o número de vezes que um colaborador será solicitado
+                    antes de passar a vez para outro colaborador.
+                </p>
+
+                <input type="number"
+                        class="form-control"
+                        id="times"
+                        name="times"
+                        placeholder="Ex: 1"
+                        required>
+                </div>
+
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Salvar
+                </button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gerarCod" tabindex="-1" aria-labelledby="gerarCod" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal">Adicionar Código</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+            <form method="POST" action="">
+                @csrf
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                    <button type="button" class="btn btn-info btn-block mt-2" id="gera-codigo" onclick="makeCod()">Gerar Código</button>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="code" name="code" value="" placeholder="Ex: dr89f"minlength="1">
+
+
+
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Salvar
+                </button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mudarSenha" tabindex="-1" aria-labelledby="mudarSenha" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal">Trocar senha</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+
+            <form method="POST" action="">
+                @csrf
+
+                <div class="form-group">
+                <label for="name">Senha Antiga</label>
+                <input type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Senha antiga">
+                </div>
+
+                <div class="form-group">
+                <label for="name">Nova Senha</label>
+                <input type="password"
+                        class="form-control"
+                        id="new-password"
+                        name="new-password"
+                        placeholder="Senha nova">
+                </div>
+
+                <div class="form-group">
+                <label for="name">Confirme a Senha</label>
+                <input type="password"
+                        class="form-control"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Confirme a senha nova">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Trocar senha</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ativarConta" tabindex="-1" aria-labelledby="ativarConta" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal">Ativar Conta</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+
+
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="links" tabindex="-1" aria-labelledby="links" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="configModal">Clique nos Links Para copiar</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+            <form>
+
+                <div class="form-group">
+                <label for="">Link Facebook Ads</label>
+                <input class="link-copy form-control" id="link-face-ads" target="__blank" style="text-decoration: none; font-weight: bold;"
+                href="" data-toggle="tooltip" data-placement="top" title="Link Face ads"
+                value=""  >
+                <button type="button" class="btn btn-primary btn-block"  onclick="copyCodFace()">Copiar Link do face ads</button>
+                </div>
+
+                <div class="form-group">
+                <label for="">Link Parceria</label>
+                <input class="form-control link-copy" id="link-parceria" target="__blank" style="text-decoration: none; font-weight: bold;"
+                href="" data-toggle="tooltip" data-placement="top" title="Link Parceria"
+                value=""  >
+                <button type="button" class="btn btn-primary btn-block"  onclick="copyCodParceria()">Copiar Link De Parceria</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -696,6 +668,7 @@
         fbq('track', 'PageView');
 
     </script>
+
     <noscript>
       <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=PIXELAQUI&ev=PageView&noscript=1" />
@@ -718,7 +691,6 @@
 
     </script>
 
-    
     <!--- Script Copiar Links  -->
     <script>
         function copyCodFace() {
@@ -737,10 +709,7 @@
 
     </script>
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
-
 
     <!--- Script Talk Api --->
     <script type="text/javascript">
@@ -780,13 +749,23 @@
 
     </script>
 
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 18,
+                    height: 18
+                });
+            }
+        })
+    </script>
+
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous">
     </script>
-
 
     <!-- BEGIN Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
@@ -803,7 +782,6 @@
         crossorigin="anonymous">
     </script>
     <!-- End Bootstrap -->
-
 
     <!-- BEGIN: Vendor JS-->
     <script src="{{ asset('assets/vendors/js/vendors.min.js') }}"></script>

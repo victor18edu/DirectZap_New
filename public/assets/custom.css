@@ -90,6 +90,13 @@ a:hover {
     border-radius: 0 !important;
 }
 
+.adm-btn:hover{
+    background-color: #00a4b1 !important;
+}
+.adm-btn{
+    background-color: #03666d !important;
+}
+
 .main-menu.menu-native-scroll .main-menu-content {
     overflow-y: auto !important;
 }
@@ -143,22 +150,47 @@ a:hover {
 }
 
 .btn-icon {
-    width: 32px !important;
-    height: 32px !important;
+    width: 35px !important;
+    height: 35px !important;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px !important;
+    transition: all .3s ease-in-out;
+
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
-.btn-icon:hover {
-    color: white !important;
+.last-td{
+
+    justify-content: center;
+    align-items: center;
+}
+td{
+    height: 60px !important;
+}
+.col-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80px !important;
+}
+/*
+.btn-icon:hover .feather, [data-feather] {
+    height: 1.4rem !important;
+    width: 1.4rem !important;
+
+}
+*/
+.btn-icon .feather, [data-feather] {
+    height: 1.3rem !important;
+    width: 1.3rem !important;
+    transition: all .3s ease-in-out;
+
 }
 
-.btn-icon .icon {
-    font-size: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 
 /*Animations*/
@@ -323,9 +355,18 @@ tbody tr td {
 tbody {
     background-color: rgba(0, 0, 0, 0.1);
 }
-
-
+#admin-table .sorting:last-child{
+    width: 180px !important;
+}
 /* Table Responsive*/
+
+/* Icones*/
+.feather, [data-feather] {
+    height: 1.3rem !important;
+    width: 1.3rem !important;
+
+}
+
 
 @media (max-width:600px) {
     thead {

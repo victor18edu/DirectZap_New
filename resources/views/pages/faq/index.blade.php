@@ -1,33 +1,31 @@
 
 @extends('layout.app')
 
-@section('content-header')
-<section id="faq-search-filter">
-    <div class="card faq-search" style="background-image: url('../../../app-assets/images/banner/banner.png')">
-        <div class="card-body text-center">
-            <!-- main title -->
-            <h2 class="text-primary">Let's answer some questions</h2>
 
-            <!-- subtitle -->
-            <p class="card-text mb-2">or choose a category to quickly find the help you need</p>
+@section('content')
+    <section id="faq-search-filter">
+        <div class="card faq-search" style="background-image: url('../../../app-assets/images/banner/banner.png')">
+            <div class="card-body text-center">
+                <!-- main title -->
+                <h2 class="text-primary">Let's answer some questions</h2>
 
-            <!-- search input -->
-            <form class="faq-search-input">
-                <div class="input-group input-group-merge">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i data-feather="search"></i>
+                <!-- subtitle -->
+                <p class="card-text mb-2">or choose a category to quickly find the help you need</p>
+
+                <!-- search input -->
+                <form class="faq-search-input">
+                    <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i data-feather="search"></i>
+                            </div>
                         </div>
+                        <input type="text" class="form-control" placeholder="Search faq..." />
                     </div>
-                    <input type="text" class="form-control" placeholder="Search faq..." />
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
-@endsection
-
-@section('content-body')
+    </section>
      <!-- frequently asked questions tabs pills -->
      <section id="faq-tabs">
         <!-- vertical tab pill -->
