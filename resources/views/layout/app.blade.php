@@ -189,6 +189,45 @@
 
                 </a>
 
+                <li class=" has-sub ">
+                    <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center"
+                        href="#">
+                        <!--<i class="icon-sidebar fas fa-link"></i>-->
+                        <i class="icon-sidebar" data-feather='link'></i>
+                        <span class="name-sidebar menu-title text-truncate"
+                            data-i18n="Menu Levels">Config Colaboradores</span>
+                    </button>
+                    <ul class="menu-content">
+                        <li>
+                            <button type="button"
+                            class="btn btn-primary btn-block btn-sidebar" data-toggle="modal" data-target="#PixelModal">
+                            <!--<i class="icon-sidebar far fa-plus-square"></i>-->
+                            <i  class="icon-sidebar" data-feather='plus-square'></i>
+                            <span class="name-sidebar">Adicionar Pixel</span>
+                        </button>
+                        </li>
+                        <li>
+                            <button type="button"
+                            class="btn btn-primary btn-block btn-sidebar"
+                                data-toggle="modal"
+                                data-target="#gerarCod">
+                                <!--<i class="icon-sidebar fas fa-code"></i>-->
+                                <i class="icon-sidebar" data-feather='code'></i>
+                                <span class="name-sidebar">Gerar Código</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" id="distriBtn"
+                                class="btn btn-primary btn-block btn-sidebar"
+                                data-toggle="modal"
+                                data-target="#distriCod">
+                                <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
+                                <i class="icon-sidebar" data-feather='share-2'></i>
+                                <span class="name-sidebar">Distribuição </span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
                 <a class=" btn btn-primary btn-block btn-sidebar" href="{{ route('sales.index') }}">
                     <!--<i class="icon-sidebar fas fa-shopping-cart"></i>-->
                     <i class="icon-sidebar" data-feather='shopping-bag'></i>
@@ -201,41 +240,6 @@
 
                 </a>
 
-                <button type="button"
-                    class="btn btn-primary btn-block btn-sidebar"
-                    data-toggle="modal"
-                    data-target="#PixelModal">
-                    <!--<i class="icon-sidebar far fa-plus-square"></i>-->
-                    <i  class="icon-sidebar" data-feather='plus-square'></i>
-                    <span class="name-sidebar">Adicionar Pixel</span>
-                </button>
-
-                <button type="button"
-                    class="btn btn-primary btn-block btn-sidebar"
-                    data-toggle="modal"
-                    data-target="#gerarCod">
-                    <!--<i class="icon-sidebar fas fa-code"></i>-->
-                    <i class="icon-sidebar" data-feather='code'></i>
-                    <span class="name-sidebar">Gerar Código</span>
-                </button>
-
-                <button type="button"
-                    class="btn btn-primary btn-block btn-sidebar"
-                    data-toggle="modal"
-                    data-target="#distriCod">
-                    <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
-                    <i class="icon-sidebar" data-feather='share-2'></i>
-                    <span class="name-sidebar">Distribuição </span>
-                </button>
-                <!--
-                <button type="button"
-                    class="btn btn-primary btn-block btn-sidebar"
-                    data-toggle="modal"
-                    data-target="#mudarSenha">
-                    <i class="icon-sidebar fas fa-user-lock"></i>
-                    <span class="name-sidebar">Mudar Senha </span>
-                </button>
-                -->
 
                 <li class=" has-sub ">
                     <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center"
@@ -644,6 +648,15 @@
         </div>
     </div>
 
+    <!------>
+    <script>
+        $('#distriBtn').on('click', function(){
+            $('#distriCod').modal('show');
+            console.log('clicou em distribuição');
+        });
+
+    </script>
+
     <!-- Facebook Pixel Code -->
     <script>
         ! function(f, b, e, v, n, t, s) {
@@ -731,7 +744,12 @@
     <script>
         $(document).ready(function() {
             $.noConflict();
-            $('#example').DataTable({
+            $('#colabs-table').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"
+                }
+            });
+            $('#admin-table').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"
                 }

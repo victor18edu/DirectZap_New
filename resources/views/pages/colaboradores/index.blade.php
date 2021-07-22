@@ -21,9 +21,10 @@
   <!-- Basic table -->
 <section id="multilingual-datatable">
   <div class="row">
+
       <div class="col-12 no-padding-mobile">
           <div class="card">
-              <table id="example">
+              <table id="colabs-table">
                   <thead>
                     <tr>
                       <th >Nome</th>
@@ -36,11 +37,18 @@
                       <tr style="width:100%;">
                         <td>Nome</td>
                         <td>Email</td>
-                        <td>Número</td>
+                        <td class="d-flex justify-content-center align-items-center">
+                            <h5 class="mr-1">5</h5>
+                            <button class="ml-1 btn btn-outline-warning rounded-circle btn-icon"
+                            data-toggle="tooltip" data-placement="top" title="" data-original-title="Resetar Clicks"
+                                data-id="">
+                                <i data-feather='refresh-ccw'></i>
+                            </button>
+                        </td>
                         <td class="">
                             <div class="row last-td">
                                 <!-- <div class="col-md-4 col-flex">-->
-                                     <button class=" btn btn-primary rounded-circle btn-icon "
+                                     <button class=" btn-outline-primary rounded-circle btn-icon "
                                      data-toggle="tooltip" data-placement="top" title="" data-original-title="Dá Play/Pause no Colaborador"
                                      data-id="">
                                         <!--<i data-feather='play'></i>-->
@@ -48,14 +56,14 @@
                                      </button>
                                  <!--</div>-->
                                  <!-- <div class="col-md-4 col-flex">-->
-                                     <button class="btn btn-warning rounded-circle btn-icon"
+                                     <button class="btn btn-outline-danger rounded-circle btn-icon"
                                      data-toggle="tooltip" data-placement="top" title="" data-original-title="Deletar Colaborador"
                                          data-id="">
                                          <i data-feather='trash-2'></i>
                                      </button>
                                  <!--</div>-->
                                  <!-- <div class="col-md-4 col-flex">-->
-                                     <button class="btn btn-info rounded-circle btn-icon"
+                                     <button class="btn btn-outline-info rounded-circle btn-icon"
                                      data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver Colaborador"
                                          data-id="">
                                          <i data-feather='info'></i>
