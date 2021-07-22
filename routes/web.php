@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ColaboradorController;
+use App\Http\Controllers\CollaboratorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LoginController;
@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 Route::resource('dashboard', DashboardController::class);
 
-Route::resource('colaboradores', ColaboradorController::class);
+Route::resource('colaboradores', CollaboratorController::class);
 
 Route::resource('user', UserController::class);
 

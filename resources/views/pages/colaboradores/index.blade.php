@@ -34,9 +34,10 @@
                     </tr>
                   </thead>
                   <tbody id="body_table_colabs">
-                      <tr style="width:100%;">
-                        <td>Nome</td>
-                        <td>Email</td>
+                  @foreach ($collaborators as $collaborator)
+                    <tr style="width:100%;">
+                        <td>{{ $collaborator->name ?? '' }}</td>
+                        <td>{{ $collaborator->email ?? 'sem email' }}</td>
                         <td class="d-flex justify-content-center align-items-center">
                             <h5 class="mr-1">5</h5>
                             <button class="ml-1 btn btn-outline-warning rounded-circle btn-icon"
@@ -74,6 +75,8 @@
                         </td>
                       </tr>
 
+                  @endforeach
+                   
                   </tbody>
               </table>
           </div>

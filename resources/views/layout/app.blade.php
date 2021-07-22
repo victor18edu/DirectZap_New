@@ -422,7 +422,7 @@
             </div>
 
             <div class="modal-body">
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('colaboradores.store') }}">
                 @csrf
 
                 <div class="form-group">

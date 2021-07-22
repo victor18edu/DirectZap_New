@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Collaborator;
 
 use Illuminate\Http\Request;
 
-class ColaboradorController extends Controller
+class CollaboratorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,10 @@ class ColaboradorController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.colaboradores.index');
+        $collaborators = Collaborator::all();
+        return view('pages.colaboradores.index',[
+            'collaborators' => $collaborators,
+        ]);
     }
 
     /**
@@ -35,7 +38,14 @@ class ColaboradorController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+
+        $colaborador = Collaborator::Create([
+            'name' => $request->name,
+            'message' => $request->message,
+            'phone' =>$request->phone
+        ]);
+        
+        return redirect()->back();
     }
 
     /**

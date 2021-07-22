@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColaboradorsTable extends Migration
+class CreateCollaboratorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateColaboradorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('colaboradors', function (Blueprint $table) {
+        Schema::create('collaborators', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('phone');
+            $table->longText('message');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateColaboradorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('colaboradors');
+        Schema::dropIfExists('collaborators');
     }
 }
