@@ -219,8 +219,7 @@
                         <li>
                             <button type="button" id="distriBtn"
                                 class="btn btn-primary btn-block btn-sidebar"
-                                data-toggle="modal"
-                                data-target="#distriCod">
+                                onclick="showDistriCod()">
                                 <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
                                 <i class="icon-sidebar" data-feather='share-2'></i>
                                 <span class="name-sidebar">Distribuição </span>
@@ -650,11 +649,11 @@
 
     <!------>
     <script>
-        $('#distriBtn').on('click', function(){
-            $('#distriCod').modal('show');
-            console.log('clicou em distribuição');
-        });
+    function showDistriCod(){        
+        $('#distriCod').modal('show');
+    }
 
+     
     </script>
 
     <!-- Facebook Pixel Code -->
