@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direct Zap</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="sortcut icon" href="{{ asset('assets/images/logo/LogoSite.png') }}" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
     <script src="https://kit.fontawesome.com/2f204339a4.js" crossorigin="anonymous"></script>
@@ -30,7 +32,8 @@
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css')}}"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -58,73 +61,80 @@
 
 
 </head>
-<body class="vertical-layout vertical-menu-modern navbar-floating footer-static  "
-    data-open="click"
-    data-menu="vertical-menu-modern"
-    data-col="blank-page">
+
+<body class="vertical-layout vertical-menu-modern navbar-floating footer-static  " data-open="click"
+    data-menu="vertical-menu-modern" data-col="blank-page">
 
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-dark navbar-shadow">
         <div class="navbar-container d-flex content">
             <div class="bookmark-wrapper d-flex align-items-center">
                 <ul class="nav navbar-nav d-xl-none">
-                    <li class="nav-item"><a class="nav-link menu-toggle"
-                            href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="14"
-                                height="14"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-menu ficon">
-                                <line x1="3"
-                                    y1="12"
-                                    x2="21"
-                                    y2="12"></line>
-                                <line x1="3"
-                                    y1="6"
-                                    x2="21"
-                                    y2="6"></line>
-                                <line x1="3"
-                                    y1="18"
-                                    x2="21"
-                                    y2="18"></line>
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="javascript:void(0);"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-menu ficon">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
                             </svg></a></li>
                 </ul>
                 <ul class="nav navbar-nav bookmark-icons">
                     <li class="nav-item d-none d-lg-block">
                         <h4>Bem Vindo Usuário</h4>
                     </li>
-
                 </ul>
 
             </div>
             <ul class="nav navbar-nav align-items-center ml-auto">
                 <li class="nav-item dropdown dropdown-user">
-                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none">
                             <span class="user-name font-weight-bolder">Nome Usuário</span>
                             <!--<span class="user-status">Admin</span>-->
                         </div>
                         <span class="avatar">
-                            <img class="round" src="{{asset('assets/images/profile/userPlaceholder.png')}}" alt="avatar" height="40" width="40">
+                            <img class="round" src="{{ asset('assets/images/profile/userPlaceholder.png') }}"
+                                alt="avatar" height="40" width="40">
                             <!--<span class="avatar-status-online"></span>-->
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
-                        <a class="dropdown-item user-itens" href="{{ route('user.index') }}"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-50"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Perfil</a>
+                        <a class="dropdown-item user-itens" href="{{ route('user.index') }}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-user mr-50">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>Perfil</a>
                         <!--<a class="dropdown-item" href="app-email.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail mr-50"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Inbox</a>
                         <a class="dropdown-item" href="app-todo.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square mr-50"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg> Task</a>
                         <a class="dropdown-item" href="app-chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square mr-50"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Chats</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="page-account-settings.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-50"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Settings</a>
                         <a class="dropdown-item" href="page-pricing.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-50"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg> Pricing</a>-->
-                        <a class="dropdown-item user-itens" href="{{ route('faq.index') }}"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle mr-50"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> FAQ</a>
-                        <a class="dropdown-item user-itens" href="page-auth-login-v2.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-power mr-50"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>Sair</a>
+                        <a class="dropdown-item user-itens" href="{{ route('faq.index') }}"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-help-circle mr-50">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg> FAQ</a>
+                        <a class="dropdown-item user-itens" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-power mr-50">
+                                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                                <line x1="12" y1="2" x2="12" y2="12"></line>
+                            </svg>Sair</a>
                     </div>
                 </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
                 <!--<li>
                     <a href="">
                         Sair
@@ -149,19 +159,16 @@
     <!-- END: Header-->
 
     <!-- BEGIN: Main Menu-->
-    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow"
-        data-scroll-to-active="true">
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand"
-                        href="{{ route('dashboard.index') }}"><span class="brand-logo">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ route('dashboard.index') }}"><span
+                            class="brand-logo">
                             <img class="text-center logo-sidebar"
-                                src="{{ asset('assets/images/logo/LogoSite.png') }}"
-                                alt="">
+                                src="{{ asset('assets/images/logo/LogoSite.png') }}" alt="">
                             <h2 class="brand-text">Direct Zap</h2>
                     </a></li>
-                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0"
-                        data-toggle="collapse">
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
                         <i class="d-block d-xl-none text-primary toggle-icon font-medium-4 fas fa-times"></i>
                         <i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary fas fa-bars"></i>
 
@@ -171,9 +178,7 @@
         </div>
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
-            <ul class="navigation navigation-main"
-                id="main-menu-navigation"
-                data-menu="menu-navigation">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
 
                 <a class=" btn btn-primary btn-block btn-sidebar" href="{{ route('dashboard.index') }}">
@@ -183,33 +188,30 @@
 
                 </a>
                 <a class="btn btn-primary btn-block btn-sidebar" href="{{ route('colaboradores.index') }}">
-                   <!-- <i class="icon-sidebar fas fa-users"></i>-->
+                    <!-- <i class="icon-sidebar fas fa-users"></i>-->
                     <i class="icon-sidebar" data-feather='users'></i>
                     <span class="name-sidebar">Colaboradores</span>
 
                 </a>
 
                 <li class=" has-sub ">
-                    <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center"
-                        href="#">
+                    <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center" href="#">
                         <!--<i class="icon-sidebar fas fa-link"></i>-->
                         <i class="icon-sidebar" data-feather='link'></i>
-                        <span class="name-sidebar menu-title text-truncate"
-                            data-i18n="Menu Levels">Config Colaboradores</span>
+                        <span class="name-sidebar menu-title text-truncate" data-i18n="Menu Levels">Config
+                            Colaboradores</span>
                     </button>
                     <ul class="menu-content">
                         <li>
-                            <button type="button"
-                            class="btn btn-primary btn-block btn-sidebar" data-toggle="modal" data-target="#PixelModal">
-                            <!--<i class="icon-sidebar far fa-plus-square"></i>-->
-                            <i  class="icon-sidebar" data-feather='plus-square'></i>
-                            <span class="name-sidebar">Adicionar Pixel</span>
-                        </button>
+                            <button type="button" class="btn btn-primary btn-block btn-sidebar" data-toggle="modal"
+                                data-target="#PixelModal">
+                                <!--<i class="icon-sidebar far fa-plus-square"></i>-->
+                                <i class="icon-sidebar" data-feather='plus-square'></i>
+                                <span class="name-sidebar">Adicionar Pixel</span>
+                            </button>
                         </li>
                         <li>
-                            <button type="button"
-                            class="btn btn-primary btn-block btn-sidebar"
-                                data-toggle="modal"
+                            <button type="button" class="btn btn-primary btn-block btn-sidebar" data-toggle="modal"
                                 data-target="#gerarCod">
                                 <!--<i class="icon-sidebar fas fa-code"></i>-->
                                 <i class="icon-sidebar" data-feather='code'></i>
@@ -217,8 +219,7 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" id="distriBtn"
-                                class="btn btn-primary btn-block btn-sidebar"
+                            <button type="button" id="distriBtn" class="btn btn-primary btn-block btn-sidebar"
                                 onclick="showDistriCod()">
                                 <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
                                 <i class="icon-sidebar" data-feather='share-2'></i>
@@ -241,40 +242,28 @@
 
 
                 <li class=" has-sub ">
-                    <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center"
-                        href="#">
+                    <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center" href="#">
                         <!--<i class="icon-sidebar fas fa-link"></i>-->
                         <i class="icon-sidebar" data-feather='link'></i>
 
-                        <span class="name-sidebar menu-title text-truncate"
-                            data-i18n="Menu Levels">Links</span>
+                        <span class="name-sidebar menu-title text-truncate" data-i18n="Menu Levels">Links</span>
                     </button>
                     <ul class="menu-content">
                         <li>
-                            <input class="link-copy form-control"
-                                id="link-face-ads"
-                                style="text-decoration: none; font-weight: bold;"
-                                value="">
+                            <input class="link-copy form-control" id="link-face-ads"
+                                style="text-decoration: none; font-weight: bold;" value="">
                             <button class="btnCopy btn btn-outline-primary btn-block btn-sidebar-secund links"
-                                target="__blank"
-                                style="text-decoration: none; font-weight: bold;"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                onclick="copyCodFace()"> Link Facebook Ads
+                                target="__blank" style="text-decoration: none; font-weight: bold;" data-toggle="tooltip"
+                                data-placement="top" onclick="copyCodFace()"> Link Facebook Ads
                             </button>
                         </li>
                         <li>
                             <div class="form-group">
-                                <input class="link-copy form-control"
-                                    id="link-parceria"
-                                    style="text-decoration: none; font-weight: bold;"
-                                    value="">
+                                <input class="link-copy form-control" id="link-parceria"
+                                    style="text-decoration: none; font-weight: bold;" value="">
                                 <button class="btnCopy btn btn-outline-primary btn-block btn-sidebar-secund links"
-                                    target="__blank"
-                                    style="text-decoration: none; font-weight: bold;"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    onclick="copyCodParceria()"> Link
+                                    target="__blank" style="text-decoration: none; font-weight: bold;"
+                                    data-toggle="tooltip" data-placement="top" onclick="copyCodParceria()"> Link
                                     Parceria
                                 </button>
                             </div>
@@ -282,13 +271,13 @@
 
                     </ul>
                 </li>
+                @if (auth()->user()->type == 'admin')
+                    <a href="{{ route('admin.index') }}" class="btn btn-primary btn-block btn-sidebar adm-btn">
+                        <i class="icon-sidebar fas fa-user-cog"></i>
+                        <span class="name-sidebar">Área Administrativa</span>
+                    </a>
 
-                <a href="{{route('admin.index')}}"
-                    class="btn btn-primary btn-block btn-sidebar adm-btn">
-                    <i class="icon-sidebar fas fa-user-cog"></i>
-                    <span class="name-sidebar">Área Administrativa</span>
-                </a>
-
+                @endif
 
             </ul>
         </div>
@@ -315,345 +304,314 @@
         </div>
     </div>
 
-     <!-- Modais -->
-    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
+    <!-- Modais -->
+    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id=""> Cadastrar Novo Colaborador </h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id=""> Cadastrar Novo Colaborador </h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nome e Sobrenome"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+
+                            <input type="text" class="form-control" id="message" name="message"
+                                placeholder="ex: Olá, John!" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="ex: 21911112222" required>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Adicionar
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="modal-body">
-
-            <form method="POST" action="">
-                @csrf
-
-                <div class="form-group">
-                <label for="name">Nome</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="name"
-                        name="name"
-                        placeholder="Nome e Sobrenome" required>
-                </div>
-
-                <div class="form-group">
-                <label for="message">Mensagem</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="message"
-                        name="message"
-                        placeholder="ex: Olá, John!" required>
-                </div>
-
-                <div class="form-group">
-                <label for="phone">Telefone</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="ex: 21911112222" required>
-                </div>
-
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn-block">
-                    Adicionar
-                </button>
-                </div>
-            </form>
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="PixelModal" tabindex="-1" aria-labelledby="PixelModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal">
-                Adicionar Pixel
-            </h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal">
+                        Adicionar Pixel
+                    </h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-            <form method="post" action="">
-                @csrf
-
-                <div class="form-group">
-                <p class="p-1">Insira abaixo seu Pixel</p>
-
-                <input type="number"
-                        class="form-control"
-                        id="pixel"
-                        name="pixel"
-                        placeholder="Ex: 1282707308773467"
-                        required>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                <div class="modal-body">
+                    <form method="post" action="">
+                        @csrf
+
+                        <div class="form-group">
+                            <p class="p-1">Insira abaixo seu Pixel</p>
+
+                            <input type="number" class="form-control" id="pixel" name="pixel"
+                                placeholder="Ex: 1282707308773467" required>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
             </div>
-        </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores" aria-hidden="true">
+    <div class="modal fade" id="modal_colaboradores" tabindex="-1" aria-labelledby="modal_colaboradores"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="modal_colaboradores">Colaborador</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal_colaboradores">Colaborador</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('colaboradores.store') }}">
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+
+                            <input type="text" class="form-control" id="name" name="name"
+                                placeholder="Nome e Sobrenome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+
+                            <input type="text" class="form-control" id="message" name="message"
+                                placeholder="ex: Olá, John!">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="ex: 21911112222">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Adicionar
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="modal-body">
-            <form method="POST" action="{{ route('colaboradores.store') }}">
-                @csrf
-
-                <div class="form-group">
-                <label for="name">Nome</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="name"
-                        name="name"
-                        placeholder="Nome e Sobrenome">
-                </div>
-
-                <div class="form-group">
-                <label for="message">Mensagem</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="message"
-                        name="message"
-                        placeholder="ex: Olá, John!">
-                </div>
-
-                <div class="form-group">
-                <label for="phone">Telefone</label>
-
-                <input type="text"
-                        class="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="ex: 21911112222">
-                </div>
-
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn-block">
-                    Adicionar
-                </button>
-                </div>
-            </form>
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="distriCod" tabindex="-1" aria-labelledby="distriCod" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal"> Configurações</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal"> Configurações</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-            <form method="POST" action="">
-                @csrf
-
-                <div class="form-group">
-                <p class="p-1">
-                    Olá, insira no campo abaixo o número de vezes que um colaborador será solicitado
-                    antes de passar a vez para outro colaborador.
-                </p>
-
-                <input type="number"
-                        class="form-control"
-                        id="times"
-                        name="times"
-                        placeholder="Ex: 1"
-                        required>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn-block">
-                    Salvar
-                </button>
+                <div class="modal-body">
+                    <form method="POST" action="">
+                        @csrf
+
+                        <div class="form-group">
+                            <p class="p-1">
+                                Olá, insira no campo abaixo o número de vezes que um colaborador será solicitado
+                                antes de passar a vez para outro colaborador.
+                            </p>
+
+                            <input type="number" class="form-control" id="times" name="times" placeholder="Ex: 1"
+                                required>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Salvar
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
             </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="gerarCod" tabindex="-1" aria-labelledby="gerarCod" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal">Adicionar Código</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal">Adicionar Código</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-            <form method="POST" action="">
-                @csrf
-
-                <div class="form-group">
-                    <div class="col-md-12">
-                    <button type="button" class="btn btn-info btn-block mt-2" id="gera-codigo" onclick="makeCod()">Gerar Código</button>
-                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <input type="text" class="form-control" id="code" name="code" value="" placeholder="Ex: dr89f"minlength="1">
+
+                <div class="modal-body">
+                    <form method="POST" action="">
+                        @csrf
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-info btn-block mt-2" id="gera-codigo"
+                                    onclick="makeCod()">Gerar Código</button>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="code" name="code" value="" placeholder="Ex: dr89f"
+                            minlength="1">
 
 
 
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn-block">
-                    Salvar
-                </button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Salvar
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
             </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="mudarSenha" tabindex="-1" aria-labelledby="mudarSenha" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal">Trocar senha</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal">Trocar senha</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="name">Senha Antiga</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Senha antiga">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Nova Senha</label>
+                            <input type="password" class="form-control" id="new-password" name="new-password"
+                                placeholder="Senha nova">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Confirme a Senha</label>
+                            <input type="password" class="form-control" id="confirm-password" name="confirm-password"
+                                placeholder="Confirme a senha nova">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Trocar senha</button>
+                    </form>
+                </div>
             </div>
-
-            <div class="modal-body">
-
-            <form method="POST" action="">
-                @csrf
-
-                <div class="form-group">
-                <label for="name">Senha Antiga</label>
-                <input type="password"
-                        class="form-control"
-                        id="password"
-                        name="password"
-                        placeholder="Senha antiga">
-                </div>
-
-                <div class="form-group">
-                <label for="name">Nova Senha</label>
-                <input type="password"
-                        class="form-control"
-                        id="new-password"
-                        name="new-password"
-                        placeholder="Senha nova">
-                </div>
-
-                <div class="form-group">
-                <label for="name">Confirme a Senha</label>
-                <input type="password"
-                        class="form-control"
-                        id="confirm-password"
-                        name="confirm-password"
-                        placeholder="Confirme a senha nova">
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block">Trocar senha</button>
-            </form>
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="ativarConta" tabindex="-1" aria-labelledby="ativarConta" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal">Ativar Conta</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal">Ativar Conta</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+
+
+
+                </div>
             </div>
-
-            <div class="modal-body">
-
-
-
-
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="modal fade" id="links" tabindex="-1" aria-labelledby="links" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="configModal">Clique nos Links Para copiar</h5>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="configModal">Clique nos Links Para copiar</h5>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-            <form>
-
-                <div class="form-group">
-                <label for="">Link Facebook Ads</label>
-                <input class="link-copy form-control" id="link-face-ads" target="__blank" style="text-decoration: none; font-weight: bold;"
-                href="" data-toggle="tooltip" data-placement="top" title="Link Face ads"
-                value=""  >
-                <button type="button" class="btn btn-primary btn-block"  onclick="copyCodFace()">Copiar Link do face ads</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
-                <div class="form-group">
-                <label for="">Link Parceria</label>
-                <input class="form-control link-copy" id="link-parceria" target="__blank" style="text-decoration: none; font-weight: bold;"
-                href="" data-toggle="tooltip" data-placement="top" title="Link Parceria"
-                value=""  >
-                <button type="button" class="btn btn-primary btn-block"  onclick="copyCodParceria()">Copiar Link De Parceria</button>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="">Link Facebook Ads</label>
+                            <input class="link-copy form-control" id="link-face-ads" target="__blank"
+                                style="text-decoration: none; font-weight: bold;" href="" data-toggle="tooltip"
+                                data-placement="top" title="Link Face ads" value="">
+                            <button type="button" class="btn btn-primary btn-block" onclick="copyCodFace()">Copiar Link
+                                do face ads</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Link Parceria</label>
+                            <input class="form-control link-copy" id="link-parceria" target="__blank"
+                                style="text-decoration: none; font-weight: bold;" href="" data-toggle="tooltip"
+                                data-placement="top" title="Link Parceria" value="">
+                            <button type="button" class="btn btn-primary btn-block" onclick="copyCodParceria()">Copiar
+                                Link De Parceria</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
             </div>
-        </div>
         </div>
     </div>
 
     <!------>
     <script>
-    function showDistriCod(){        
-        $('#distriCod').modal('show');
-    }
-
-     
+        function showDistriCod() {
+            $('#distriCod').modal('show');
+        }
     </script>
 
     <!-- Facebook Pixel Code -->
@@ -678,11 +636,10 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', 'PIXELAQUI');
         fbq('track', 'PageView');
-
     </script>
 
     <noscript>
-      <img height="1" width="1" style="display:none"
+        <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=PIXELAQUI&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
@@ -700,7 +657,6 @@
             }
             document.getElementById("code").value = codigo;
         }
-
     </script>
 
     <!--- Script Copiar Links  -->
@@ -718,7 +674,6 @@
             copyCodText.setSelectionRange(0, 9999);
             document.execCommand("copy");
         }
-
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -736,7 +691,6 @@
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
-
     </script>
 
     <!--- Script datatable --->
@@ -754,16 +708,14 @@
                 }
             });
         });
-
     </script>
 
     <script>
         const check = document.querySelector('.btn-sidebar')
-        ('.btn-sidebar').on('click', function(){
-            $(this).addClass('active');
-            console.log('Ativou');
-        });
-
+            ('.btn-sidebar').on('click', function() {
+                $(this).addClass('active');
+                console.log('Ativou');
+            });
     </script>
 
     <script>
@@ -780,23 +732,19 @@
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous">
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
 
     <!-- BEGIN Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous">
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous">
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous">
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
     <!-- End Bootstrap -->
 
@@ -822,4 +770,5 @@
 
 
 </body>
+
 </html>

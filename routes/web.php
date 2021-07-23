@@ -11,6 +11,7 @@ use App\Http\Controllers\SingUpController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\CommissionsController;
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,27 +26,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard.index');
 });
+Auth::routes();
+Route::middleware(['auth'])->group(function () {
 
-Route::resource('dashboard', DashboardController::class);
+    Route::resource('dashboard', DashboardController::class);
 
-Route::resource('colaboradores', CollaboratorController::class);
+    Route::resource('colaboradores', CollaboratorController::class);
 
-Route::resource('user', UserController::class);
+    Route::resource('user', UserController::class);
 
-Route::resource('faq', FaqController::class);
+    Route::resource('faq', FaqController::class);
 
-Route::resource('login', LoginController::class);
+    Route::resource('reset', ResetController::class);
 
-Route::resource('reset', ResetController::class);
+    Route::resource('change', PasswordChangeController::class);
 
-Route::resource('change', PasswordChangeController::class);
+    Route::resource('singup', SingUpController::class);
 
-Route::resource('singup', SingUpController::class);
+    Route::resource('sales', SalesController::class);
 
-Route::resource('sales', SalesController::class);
+    Route::resource('commissions', CommissionsController::class);
 
-Route::resource('commissions', CommissionsController::class);
+    Route::resource('admin', AdminController::class);
 
-Route::resource('admin', AdminController::class);
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
