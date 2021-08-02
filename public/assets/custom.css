@@ -170,6 +170,7 @@ a:hover {
 }
 td{
     height: 60px !important;
+
 }
 .col-flex{
     display: flex;
@@ -467,4 +468,64 @@ tbody {
 
 .card-adm {
     background-color: rgba(22, 29, 49, 0.5) !important;
+}
+
+
+
+/** Teste datatable  **/
+:root{
+    --primary-color: #d93532;
+    --secondary-color: #f6da0e;
+    --light-color: #fff;
+    --dark-color: #3c3c3c;
+    --bg-color: #f3f3f3;
+    --border-color: #ca7272;
+    --card-color: #fff;
+
+}
+
+.datatable{
+
+}
+.card-table{
+    background-color: var(--bg-color) !important;
+}
+#table_products{
+
+}
+.thead-none{
+    display: none;
+}
+.tbody-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+
+.tr-card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-color) !important;
+    margin: 1.5%;
+    border-radius: 5px;
+}
+
+.tr-card td{
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-product{
+    width: 200px;
+
+}
+.tr-card .td-img{
+    padding: 15px !important;
 }
