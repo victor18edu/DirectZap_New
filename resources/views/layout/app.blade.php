@@ -54,10 +54,12 @@
 
     <!-- BEGIN: Custom CSS--
     <link rel="stylesheet" type="text/css" href="../../../assets/style.css">
-    <!-- END: Custom CSS-->
+     END: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/custom.css') }}">
 
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> --}}
+
+    @yield('css')
 
 
 </head>
@@ -767,7 +769,7 @@
     {{-- <script src="{{asset('assets/js/scripts/tables/table-datatables-basic.js')}}"></script> --}}
     <script src="{{ asset('assets/js/scripts/components/components-dropdowns.js') }}"></script>
     <!-- END: Page JS-->
-
+@yield('js')
 
 </body>
 
