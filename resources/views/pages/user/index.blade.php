@@ -65,7 +65,7 @@
                             <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                 aria-labelledby="account-pill-general" aria-expanded="true">
                                 <!-- form -->
-                                <form class="validate-form" method="post" action="{{ route('user.update') }}">
+                                <form class="validate-form" method="post" action="{{ route('user.update', auth()->user()->id) }}">
                                     <!-- header media -->
                                     <div class=" media">
                                         <a href="javascript:void(0);" class="mr-25">
