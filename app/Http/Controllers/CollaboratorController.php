@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Collaborator;
 
+use App\Models\Collaborator;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CollaboratorController extends Controller
@@ -14,8 +15,8 @@ class CollaboratorController extends Controller
      */
     public function index()
     {
-        $collaborators = Collaborator::all();
-        return view('pages.colaboradores.index',[
+        $collaborators = Collaborator::where('users_id', auth()->user()->id)->get();
+        return view('pages.colaboradores.index', [
             'collaborators' => $collaborators,
         ]);
     }
@@ -39,13 +40,25 @@ class CollaboratorController extends Controller
     public function store(Request $request)
     {
 
-        $colaborador = Collaborator::Create([
-            'name' => $request->name,
-            'message' => $request->message,
-            'phone' =>$request->phone
-        ]);
-        
-        return redirect()->back();
+        $user = User::where('id', auth()->user()->id)->first();
+
+        if ($user->collaborators < 8) {
+            $colaborador = Collaborator::Create([
+                'name' => $request->name,
+                'message' => $request->message,
+                'phone' => $request->phone,
+                'users_id' =>  auth()->user()->id,
+            ]);
+            $count_collaborators = $user->collaborators + 1;
+            $user->fill([
+                'collaborators'  => $count_collaborators,
+            ]);
+
+            $user->save();
+            return redirect()->back()->with('success', 'Cadastrado com sucesso');
+        } else {
+            return redirect()->back()->with('error', 'Você possui o número máximo de colaboradores');
+        }
     }
 
     /**
@@ -90,6 +103,16 @@ class CollaboratorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $colaborattor = Collaborator::where('id', $id)->first();
+        $colaborattor->delete();
+
+        $user = User::where('id', auth()->user()->id)->first();
+        $count_collaborators = $user->collaborators - 1;
+        $user->fill([
+            'collaborators'  => $count_collaborators,
+        ]);
+
+        $user->save();
+        return response()->json(true);
     }
 }

@@ -18,6 +18,7 @@ class CreateCollaboratorsTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->longText('message');
+            $table->foreignId('users_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

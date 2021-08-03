@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Image;
+use Symfony\Component\Console\Input\Input;
 
 class UserController extends Controller
 {
@@ -13,8 +18,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.user.index');
+        $user = User::where('id', auth()->user()->id)->first();
+        return view('pages.user.index', [
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -69,7 +76,47 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::where('id', auth()->user()->id)->first();
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $avatar = Str::lower('user' . auth()->user()->id . '.' . $file->getClientOriginalExtension());
+            //Image::make($file)->resize(null,400)->save(public_path('/uploads/avatars/' . $avatar));
+            $img = Image::make($file)->resize(400, 400, function ($constraint) {
+                $constraint->aspectRatio();
+                // $constraint->upsize();
+            });
+            $img->crop(400, 400);
+            $img->save(public_path('/uploads/avatars/' . $avatar));
+        }
+        $user->fill([
+            'name'  => $request->name,
+            'username'  => $request->username,
+            'avatar'  => $request->avatar,
+            'company'  => $request->company,
+        ]);
+
+        $user->save();
+
+        return redirect()->back()->with('success', 'Alterado com sucesso');
+    }
+
+    public function updatatePass(Request $request, $id)
+    {
+
+        if ($request->new_password != $request->confirm_password) {
+
+            return redirect()->back()->with('error', 'Nova senha e confirmaçaõ de senha estão diferentes');
+        } else if (Hash::check($request->password, auth()->user()->password)) {
+
+            $user = User::where('id', auth()->user()->id)->first();
+            $user->fill([
+                'password'  => bcrypt($request->new_password),
+            ]);
+            $user->save();
+            return redirect()->back()->with('success', 'Alterado com sucesso');
+        } else {
+            return redirect()->back()->with('error', 'Senha incorreta');
+        }
     }
 
     /**

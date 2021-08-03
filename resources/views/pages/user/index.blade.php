@@ -23,35 +23,38 @@
                         </a>
                     </li>
                     <!-- Time -->
-                    <li class="nav-item">
-                        <a class="nav-link" id="account-pill-password" data-toggle="pill" href="#account-vertical-acess"
-                            aria-expanded="false">
-                            <i data-feather='clock'></i>
-                            <span class="font-weight-bold">Acesso ao sistema</span>
-                        </a>
-                    </li>
+
+                    @if (auth()->user()->type == 'user')
+                        <li class="nav-item">
+                            <a class="nav-link" id="account-pill-password" data-toggle="pill" href="#account-vertical-acess"
+                                aria-expanded="false">
+                                <i data-feather='clock'></i>
+                                <span class="font-weight-bold">Acesso ao sistema</span>
+                            </a>
+                        </li>
+                    @endif
                     <!-- information --
-                                <li class="nav-item">
-                                    <a class="nav-link" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info font-medium-3 mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                                        <span class="font-weight-bold">Informações</span>
-                                    </a>
-                                </li>
-                                <!-- social --
-                                <li class="nav-item">
-                                    <a class="nav-link" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link font-medium-3 mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                                        <span class="font-weight-bold">Social</span>
-                                    </a>
-                                </li>
-                                <!-- notification --
-                                <li class="nav-item">
-                                    <a class="nav-link" id="account-pill-notifications" data-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell font-medium-3 mr-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                                        <span class="font-weight-bold">Notifications</span>
-                                    </a>
-                                </li>
-                                -->
+                       <li class="nav-item">
+                           <a class="nav-link" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info font-medium-3 mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                               <span class="font-weight-bold">Informações</span>
+                           </a>
+                       </li>
+                       <!-- social --
+                       <li class="nav-item">
+                           <a class="nav-link" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link font-medium-3 mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                               <span class="font-weight-bold">Social</span>
+                           </a>
+                       </li>
+                       <!-- notification --
+                       <li class="nav-item">
+                           <a class="nav-link" id="account-pill-notifications" data-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell font-medium-3 mr-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                               <span class="font-weight-bold">Notifications</span>
+                           </a>
+                       </li>
+                    -->
                 </ul>
             </div>
             <!--/ left menu section -->
@@ -61,11 +64,34 @@
                 <div class="card ">
                     <div class="card-body">
                         <div class="tab-content">
+                            @if ($alertFm = Session::get('success'))
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert">×</button>
+                                            <strong>{{ $alertFm }}</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                            @if ($alertFm = Session::get('error'))
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        <strong>{{ $alertFm }}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                             <!-- general tab -->
                             <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                 aria-labelledby="account-pill-general" aria-expanded="true">
                                 <!-- form -->
-                                <form class="validate-form" method="post" action="{{ route('user.update', auth()->user()->id) }}">
+                                <form class="validate-form" method="post"
+                                    action="{{ route('user.update', auth()->user()->id) }}" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('put')
                                     <!-- header media -->
                                     <div class=" media">
                                         <a href="javascript:void(0);" class="mr-25">
@@ -90,40 +116,41 @@
                                             <div class="form-group">
                                                 <label for="account-username">Nick</label>
                                                 <input type="text" class="form-control" id="account-username"
-                                                    name="username" placeholder="Username" value="" />
+                                                    name="username" placeholder="Username"
+                                                    value="{{ $user->username }}" />
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label for="account-name">Nome</label>
                                                 <input type="text" class="form-control" id="account-name" name="name"
-                                                    placeholder="Nome" value="" />
+                                                    placeholder="Nome" value="{{ $user->name }}" />
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label for="account-e-mail">E-mail</label>
                                                 <input type="email" class="form-control" id="account-e-mail" name="email"
-                                                    placeholder="Email Principal" value="" />
+                                                    placeholder="Email Principal" value="{{ $user->email }}" disabled />
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label for="account-company">Nome Empresa</label>
                                                 <input type="text" class="form-control" id="account-company" name="company"
-                                                    placeholder="Nome da Empresa" value="" />
+                                                    placeholder="Nome da Empresa" value="{{ $user->company }}" />
                                             </div>
                                         </div>
                                         <!--
-                                                    <div class="col-12 mt-75">
-                                                        <div class="alert alert-warning mb-50" role="alert">
-                                                            <h4 class="alert-heading">Your email is not confirmed. Please check your inbox.</h4>
-                                                            <div class="alert-body">
-                                                                <a href="javascript: void(0);" class="alert-link">Resend confirmation</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    -->
+                                                                    <div class="col-12 mt-75">
+                                                                        <div class="alert alert-warning mb-50" role="alert">
+                                                                            <h4 class="alert-heading">Your email is not confirmed. Please check your inbox.</h4>
+                                                                            <div class="alert-body">
+                                                                                <a href="javascript: void(0);" class="alert-link">Resend confirmation</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    -->
                                         <div class="col-12">
                                             <button type="submit" class="btn btn-primary mt-2 mr-1">Salvar
                                                 alterações</button>
@@ -139,7 +166,8 @@
                             <div class="tab-pane fade" id="account-vertical-password" role="tabpanel"
                                 aria-labelledby="account-pill-password" aria-expanded="false">
                                 <!-- form -->
-                                <form class="validate-form">
+                                <form class="validate-form" action="{{ route('user.updatePass', auth()->user()->id) }}" method="post">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
@@ -161,7 +189,7 @@
                                             <div class="form-group">
                                                 <label for="account-new-password">Nova Senha</label>
                                                 <div class="input-group form-password-toggle input-group-merge">
-                                                    <input type="password" id="account-new-password" name="new-password"
+                                                    <input type="password" id="account-new-password" name="new_password"
                                                         class="form-control" placeholder="Nova Senha" />
                                                     <div class="input-group-append">
                                                         <div class="input-group-text cursor-pointer">
@@ -176,7 +204,7 @@
                                                 <label for="account-retype-new-password">Confirme a Senha</label>
                                                 <div class="input-group form-password-toggle input-group-merge">
                                                     <input type="password" class="form-control"
-                                                        id="account-retype-new-password" name="confirm-new-password"
+                                                        id="account-retype-new-password" name="confirm_password"
                                                         placeholder="Nova Senha" />
                                                     <div class="input-group-append">
                                                         <div class="input-group-text cursor-pointer"><i
@@ -197,30 +225,34 @@
                             </div>
                             <!--/ change password -->
 
-                            <!-- Acesso -->
-                            <div class="tab-pane fade" id="account-vertical-acess" role="tabpanel"
-                                aria-labelledby="account-pill-info" aria-expanded="false">
-                                <!-- form -->
-                                <form class="validate-form">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="account-acess-time">Tempo de Acesso Restante</label>
-                                                <input type="text" class="form-control flatpickr" disabled placeholder=""
-                                                    id="account-acess-time" name="" value="30 dias restantes" />
+                            @if (auth()->user()->type == 'user')
+                                <!-- Acesso -->
+                                <div class="tab-pane fade" id="account-vertical-acess" role="tabpanel"
+                                    aria-labelledby="account-pill-info" aria-expanded="false">
+                                    <!-- form -->
+                                    <form class="validate-form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="account-acess-time">Tempo de Acesso Restante</label>
+                                                    <input type="text" class="form-control flatpickr" disabled
+                                                        placeholder="" id="account-acess-time" name=""
+                                                        value="30 dias restantes" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary mt-1 mr-1">Renovar
+                                                    Acesso</button>
+                                                <button type="reset"
+                                                    class="btn btn-outline-secondary mt-1">Cancelar</button>
                                             </div>
                                         </div>
-
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-primary mt-1 mr-1">Renovar Acesso</button>
-                                            <button type="reset" class="btn btn-outline-secondary mt-1">Cancelar</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!--/ form -->
-                            </div>
-                            <!--/ Acesso -->
-
+                                    </form>
+                                    <!--/ form -->
+                                </div>
+                                <!--/ Acesso -->
+                            @endif
                             <!-- information -->
                             <div class="tab-pane fade" id="account-vertical-info" role="tabpanel"
                                 aria-labelledby="account-pill-info" aria-expanded="false">
@@ -465,6 +497,9 @@
             <!--/ right content section -->
         </div>
     </section>
+@endsection
+@section('css')
+
 @endsection
 @section('js')
     <script>

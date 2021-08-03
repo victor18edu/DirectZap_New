@@ -36,6 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('colaboradores', CollaboratorController::class);
 
     Route::resource('user', UserController::class);
+    Route::post('updatePass/{id}',[ UserController::class, 'updatatePass'])->name('user.updatePass');
 
     Route::resource('faq', FaqController::class);
 

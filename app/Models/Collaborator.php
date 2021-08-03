@@ -13,5 +13,6 @@ class Collaborator extends Model
         'name',
         'phone',
         'message',
+        'users_id',
     ];
 }

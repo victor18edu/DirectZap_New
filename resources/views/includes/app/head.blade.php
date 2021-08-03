@@ -49,6 +49,7 @@
 
     <!-- END: Page CSS-->
 
+    @yield('css')
     <!-- BEGIN: Custom CSS--
     <link rel="stylesheet" type="text/css" href="../../../assets/style.css">
     <!-- END: Custom CSS-->

@@ -21,8 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('type');
             $table->string('avatar')->nullable();
-            $table->string('nick')->nullable();
             $table->string('company')->nullable();
+            $table->string('username')->nullable();
+            $table->integer('max_collaborator')->default(8);
+            $table->integer('collaborators')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
