@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Collaborator extends Model
+class Configuration extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'phone',
-        'message',
-        'count',
-        'active',
-        'users_id',
+        'link_facebook',
+        'link_partnership',
+        'distribution',
+        'max_collaborator',
+        'collaborators',
+        'user_id',
     ];
 }

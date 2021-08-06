@@ -19,6 +19,8 @@ class CreateCollaboratorsTable extends Migration
             $table->string('phone');
             $table->longText('message');
             $table->foreignId('users_id')->constrained()->onDelete('cascade');
+            $table->integer('count')->default(0);
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

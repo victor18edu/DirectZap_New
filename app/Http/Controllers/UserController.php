@@ -6,9 +6,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Image;
 use Symfony\Component\Console\Input\Input;
 
+use Image;
 class UserController extends Controller
 {
     /**
@@ -77,6 +77,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::where('id', auth()->user()->id)->first();
+        // dd($request);
         if ($request->hasFile('avatar')) {
             $file = $request->file('avatar');
             $avatar = Str::lower('user' . auth()->user()->id . '.' . $file->getClientOriginalExtension());
@@ -91,7 +92,7 @@ class UserController extends Controller
         $user->fill([
             'name'  => $request->name,
             'username'  => $request->username,
-            'avatar'  => $request->avatar,
+            'avatar'  => $avatar,
             'company'  => $request->company,
         ]);
 

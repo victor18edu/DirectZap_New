@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Collaborator;
+use App\Models\Configuration;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -40,21 +41,21 @@ class CollaboratorController extends Controller
     public function store(Request $request)
     {
 
-        $user = User::where('id', auth()->user()->id)->first();
+        $config = Configuration::where('user_id', auth()->user()->id)->first();
 
-        if ($user->collaborators < 8) {
+        if ($config->collaborators < 8) {
             $colaborador = Collaborator::Create([
                 'name' => $request->name,
                 'message' => $request->message,
                 'phone' => $request->phone,
                 'users_id' =>  auth()->user()->id,
             ]);
-            $count_collaborators = $user->collaborators + 1;
-            $user->fill([
+            $count_collaborators = $config->collaborators + 1;
+            $config->fill([
                 'collaborators'  => $count_collaborators,
             ]);
 
-            $user->save();
+            $config->save();
             return redirect()->back()->with('success', 'Cadastrado com sucesso');
         } else {
             return redirect()->back()->with('error', 'Você possui o número máximo de colaboradores');
@@ -103,10 +104,10 @@ class CollaboratorController extends Controller
      */
     public function destroy($id)
     {
-        $colaborattor = Collaborator::where('id', $id)->first();
+        $colaborattor = Configuration::where('user_id', $id)->first();
         $colaborattor->delete();
 
-        $user = User::where('id', auth()->user()->id)->first();
+        $user = Configuration::where('user_id', auth()->user()->id)->first();
         $count_collaborators = $user->collaborators - 1;
         $user->fill([
             'collaborators'  => $count_collaborators,
@@ -114,5 +115,18 @@ class CollaboratorController extends Controller
 
         $user->save();
         return response()->json(true);
+    }
+
+    public function distribution(Request $request)
+    {
+        $config = Configuration::updateOrCreate(
+            [
+                'user_id' => auth()->user()->id
+            ],
+            [
+                'distribution' => $request->distribution
+            ]);
+
+        return redirect()->back();
     }
 }

@@ -34,27 +34,27 @@
                         </li>
                     @endif
                     <!-- information --
-                       <li class="nav-item">
-                           <a class="nav-link" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info font-medium-3 mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                               <span class="font-weight-bold">Informações</span>
-                           </a>
-                       </li>
-                       <!-- social --
-                       <li class="nav-item">
-                           <a class="nav-link" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link font-medium-3 mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                               <span class="font-weight-bold">Social</span>
-                           </a>
-                       </li>
-                       <!-- notification --
-                       <li class="nav-item">
-                           <a class="nav-link" id="account-pill-notifications" data-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell font-medium-3 mr-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                               <span class="font-weight-bold">Notifications</span>
-                           </a>
-                       </li>
-                    -->
+                           <li class="nav-item">
+                               <a class="nav-link" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info font-medium-3 mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                   <span class="font-weight-bold">Informações</span>
+                               </a>
+                           </li>
+                           <!-- social --
+                           <li class="nav-item">
+                               <a class="nav-link" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link font-medium-3 mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                   <span class="font-weight-bold">Social</span>
+                               </a>
+                           </li>
+                           <!-- notification --
+                           <li class="nav-item">
+                               <a class="nav-link" id="account-pill-notifications" data-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell font-medium-3 mr-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                                   <span class="font-weight-bold">Notifications</span>
+                               </a>
+                           </li>
+                        -->
                 </ul>
             </div>
             <!--/ left menu section -->
@@ -75,15 +75,15 @@
                                 </div>
                             @endif
                             @if ($alertFm = Session::get('error'))
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="alert alert-danger">
-                                        <button type="button" class="close" data-dismiss="alert">×</button>
-                                        <strong>{{ $alertFm }}</strong>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="alert alert-danger">
+                                            <button type="button" class="close" data-dismiss="alert">×</button>
+                                            <strong>{{ $alertFm }}</strong>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endif
+                            @endif
                             <!-- general tab -->
                             <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                 aria-labelledby="account-pill-general" aria-expanded="true">
@@ -95,15 +95,17 @@
                                     <!-- header media -->
                                     <div class=" media">
                                         <a href="javascript:void(0);" class="mr-25">
-                                            <img src="{{ asset('assets/images/profile/userPlaceholder.png') }}"
-                                                id="account-upload-img" class="rounded mr-50" alt="profile image"
-                                                height="80" width="80" />
+                                            <img src="@if ($user->avatar) {{ asset("uploads/avatars/$user->avatar") }}
+                                        @else
+                                            {{ asset('assets/images/profile/userPlaceholder.png') }} @endif"
+                                            id="account-upload-img" class="rounded mr-50" alt="profile image"
+                                            height="80" width="80" />
                                         </a>
                                         <!-- upload and reset button -->
                                         <div class="media-body mt-75 ml-1">
                                             <label for="account-upload" class="btn btn-sm btn-primary mb-75 mr-75">Enviar
                                                 Imagem</label>
-                                            <input type="file" id="account-upload"
+                                            <input type="file" id="account-upload" name="avatar"
                                                 onchange="readURL(this, '#account-upload-img')" hidden accept="image/*" />
                                             <button class="btn btn-sm btn-outline-secondary mb-75">Resetar</button>
                                             <p>JPG, GIF ou PNG. Com tamanho máximo de 800kB</p>
@@ -142,15 +144,15 @@
                                             </div>
                                         </div>
                                         <!--
-                                                                    <div class="col-12 mt-75">
-                                                                        <div class="alert alert-warning mb-50" role="alert">
-                                                                            <h4 class="alert-heading">Your email is not confirmed. Please check your inbox.</h4>
-                                                                            <div class="alert-body">
-                                                                                <a href="javascript: void(0);" class="alert-link">Resend confirmation</a>
+                                                                        <div class="col-12 mt-75">
+                                                                            <div class="alert alert-warning mb-50" role="alert">
+                                                                                <h4 class="alert-heading">Your email is not confirmed. Please check your inbox.</h4>
+                                                                                <div class="alert-body">
+                                                                                    <a href="javascript: void(0);" class="alert-link">Resend confirmation</a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    -->
+                                                                        -->
                                         <div class="col-12">
                                             <button type="submit" class="btn btn-primary mt-2 mr-1">Salvar
                                                 alterações</button>
@@ -166,7 +168,8 @@
                             <div class="tab-pane fade" id="account-vertical-password" role="tabpanel"
                                 aria-labelledby="account-pill-password" aria-expanded="false">
                                 <!-- form -->
-                                <form class="validate-form" action="{{ route('user.updatePass', auth()->user()->id) }}" method="post">
+                                <form class="validate-form" action="{{ route('user.updatePass', auth()->user()->id) }}"
+                                    method="post">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12 col-sm-6">

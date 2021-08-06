@@ -11,6 +11,7 @@ use App\Http\Controllers\SingUpController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\CommissionsController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ColaboradorController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,9 +35,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('dashboard', DashboardController::class);
 
     Route::resource('colaboradores', CollaboratorController::class);
+    Route::put('distribuicao/{id}', [CollaboratorController::class, 'distribution'])->name('collaborator.distribution');
 
     Route::resource('user', UserController::class);
-    Route::post('updatePass/{id}',[ UserController::class, 'updatatePass'])->name('user.updatePass');
+    Route::post('updatePass/{id}', [UserController::class, 'updatatePass'])->name('user.updatePass');
 
     Route::resource('faq', FaqController::class);
 

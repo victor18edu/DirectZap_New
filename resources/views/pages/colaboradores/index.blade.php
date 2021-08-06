@@ -46,7 +46,7 @@
                         <thead>
                             <tr>
                                 <th>Nome</th>
-                                <th>Email</th>
+                                <th>Telefone</th>
                                 <th>Qnt de Clicks</th>
                                 <th>Opções</th>
                             </tr>
@@ -55,9 +55,9 @@
                             @foreach ($collaborators as $collaborator)
                                 <tr style="width:100%;">
                                     <td>{{ $collaborator->name ?? '' }}</td>
-                                    <td>{{ $collaborator->email ?? 'sem email' }}</td>
+                                    <td>{{ $collaborator->phone ?? 'sem email' }}</td>
                                     <td class="d-flex justify-content-center align-items-center">
-                                        <h5 class="mr-1">5</h5>
+                                        <h5 class="mr-1">{{ $collaborator->count }}</h5>
                                         <button class="ml-1 btn btn-outline-warning rounded-circle btn-icon"
                                             data-toggle="tooltip" data-placement="top" title=""
                                             data-original-title="Resetar Clicks" data-id="">
