@@ -12,6 +12,7 @@ use App\Http\Controllers\SalesController;
 use App\Http\Controllers\CommissionsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ColaboradorController;
+use App\Http\Controllers\IntegrationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('commissions', CommissionsController::class);
 
     Route::resource('admin', AdminController::class);
+
+    Route::resource('integration', IntegrationController::class);
+
 
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

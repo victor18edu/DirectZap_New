@@ -116,7 +116,10 @@
                     <i class="icon-sidebar fas fa-user-cog"></i>
                     <span class="name-sidebar">Área Administrativa</span>
                 </a>
-
+                <a href="{{ route('integration.index') }}" class="btn btn-primary btn-block btn-sidebar adm-btn">
+                    <i class="icon-sidebar fas fa-user-cog"></i>
+                    <span class="name-sidebar">Integração</span>
+                </a>
             @endif
 
         </ul>
