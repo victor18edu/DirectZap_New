@@ -38,8 +38,7 @@
                 <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center" href="#">
                     <!--<i class="icon-sidebar fas fa-link"></i>-->
                     <i class="icon-sidebar" data-feather='link'></i>
-                    <span class="name-sidebar menu-title text-truncate" data-i18n="Menu Levels">Config
-                        Colaboradores</span>
+                    <span class="name-sidebar menu-title text-truncate" data-i18n="Menu Levels">Gerenciar Pixel</span>
                 </button>
                 <ul class="menu-content">
                     <li>
@@ -47,7 +46,7 @@
                             data-target="#PixelModal" onclick="showAddPixel()">
                             <!--<i class="icon-sidebar far fa-plus-square"></i>-->
                             <i class="icon-sidebar" data-feather='plus-square'></i>
-                            <span class="name-sidebar">Adicionar Pixel</span>
+                            <span class="name-sidebar">Pixel Facebook</span>
                         </button>
                     </li>
                     <li>
@@ -55,16 +54,17 @@
                             data-target="#gerarCod" onclick="showGerarCod()">
                             <!--<i class="icon-sidebar fas fa-code"></i>-->
                             <i class="icon-sidebar" data-feather='code'></i>
-                            <span class="name-sidebar">Gerar Código</span>
+                            <span class="name-sidebar">Pixel GTM</span>
                         </button>
                     </li>
                     <li>
+                        <!--
                         <button type="button" id="distriBtn" class="btn btn-primary btn-block btn-sidebar"
                             onclick="showDistriCod()">
-                            <!--<i class="icon-sidebar fas fa-sitemap"></i>-->
                             <i class="icon-sidebar" data-feather='share-2'></i>
                             <span class="name-sidebar">Distribuição </span>
                         </button>
+                        -->
                     </li>
                 </ul>
             </li>
@@ -79,11 +79,28 @@
                 <span class="name-sidebar">Comissões</span>
 
             </a>
+            <a class="btn btn-primary btn-block btn-sidebar" href="{{ route('links.index') }}">
+                <i class="icon-sidebar" data-feather='link'></i>
+                <span class="name-sidebar">Links</span>
 
+            </a>
+            <input style="opacity:0; position: absolute; " type="text" class="form-control" id="copy-to-clipboard-input" value="Link do precell">
+            <button class="btn btn-primary btn-block btn-sidebar" id="btn-copy" data-toggle="modal"
+            data-target="#copy_modal">
+                <i class="icon-sidebar" data-feather='link'></i>
+                <span class="name-sidebar">Copiar Link precell</span>
+            </button>
+            <a class="btn btn-primary btn-block btn-sidebar" href="{{ route('links.index') }}">
+                <i class="icon-sidebar" data-feather='link'></i>
+                <span class="name-sidebar">Atualizações</span>
 
-            <li class=" has-sub ">
+            </a>
+            <a href="{{ route('integration.index') }}" class="btn btn-primary btn-block btn-sidebar ">
+                <i class="icon-sidebar fas fa-user-cog"></i>
+                <span class="name-sidebar">Integrações</span>
+            </a>
+            <!--<li class=" has-sub ">
                 <button class="btn btn-primary btn-block btn-sidebar d-flex align-items-center" href="#">
-                    <!--<i class="icon-sidebar fas fa-link"></i>-->
                     <i class="icon-sidebar" data-feather='link'></i>
 
                     <span class="name-sidebar menu-title text-truncate" data-i18n="Menu Levels">Links</span>
@@ -110,16 +127,13 @@
                     </li>
 
                 </ul>
-            </li>
+            </li>-->
             @if (auth()->user()->type == 'admin')
                 <a href="{{ route('admin.index') }}" class="btn btn-primary btn-block btn-sidebar adm-btn">
                     <i class="icon-sidebar fas fa-user-cog"></i>
                     <span class="name-sidebar">Área Administrativa</span>
                 </a>
-                <a href="{{ route('integration.index') }}" class="btn btn-primary btn-block btn-sidebar adm-btn">
-                    <i class="icon-sidebar fas fa-user-cog"></i>
-                    <span class="name-sidebar">Integração</span>
-                </a>
+
             @endif
 
         </ul>

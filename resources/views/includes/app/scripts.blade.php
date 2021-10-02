@@ -115,7 +115,7 @@
 
     <script>
         const check = document.querySelector('.btn-sidebar')
-            ('.btn-sidebar').on('click', function() {
+            $('.btn-sidebar').on('click', function() {
                 $(this).addClass('active');
                 console.log('Ativou');
             });
@@ -135,6 +135,61 @@
             }
         })
     </script>
+    <script>
+  /*
+        $( "#com_precell" ).prop( "checked", false );
+
+        if( $( "#com_precell" ).prop( "checked", true) ){
+            $(".dominios-select").css("display", "block");
+            $( "#sem_precell" ).prop( "checked", false );
+        } else if($( "#com_precell" ).prop( "checked", false)){
+            $(".dominios-select").css("display", "none");
+            $( "#com_precell" ).prop( "checked", false );
+        }
+*/
+        const precell = document.querySelector('#com_precell');
+        const dominios = document.querySelector('.dominios-select');
+        $('#sem_precell').prop('checked') == true;
+           $('#com_precell').on('click', function() {
+                if( $("#com_precell").prop('checked') == true){
+                    $('.dominios-select').addClass('on');
+                    $('#sem_precell').prop('checked') == false;
+                    console.log('Ativou Precell');
+                }
+            });
+        $('#sem_precell').on('click', function() {
+             if( $("#sem_precell").prop('checked') == true){
+                 $('#com_precell').prop('checked') == false;
+                 $('.dominios-select').removeClass('on');
+                 console.log('Removeu Precell');
+             }
+        });
+
+
+
+    </script>
+
+
+
+<!-- Script Para copiar texto ( botão do menu) -->
+<script>
+
+    'use strict';
+
+    var userText = $('#copy-to-clipboard-input');
+    var btnCopy = $('#btn-copy'),
+    isRtl = $('html').attr('data-textdirection') === 'rtl';
+
+    // copy text on click
+    btnCopy.on('click', function () {
+    userText.select();
+    document.execCommand('copy');
+    toastr['success']('', 'Copied to clipboard!', {
+        rtl: isRtl
+    });
+    });
+
+</script>
 
 
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
@@ -159,6 +214,7 @@
 <!-- BEGIN: Vendor JS-->
 <script src="{{ asset('assets/vendors/js/vendors.min.js') }}"></script>
 <script src="{{ asset('assets/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
+<script src="{{ asset('assets/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
@@ -173,5 +229,5 @@
 <!-- BEGIN: Page JS-->
 <script src="{{ asset('assets/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
 {{-- <script src="{{asset('assets/js/scripts/tables/table-datatables-basic.js')}}"></script> --}}
-<script src="{{ asset('assets/js/scripts/components/components-dropdowns.js') }}"></script>
+<script src="{{ asset('assets/js/scripts/extensions/ext-component-toastr.min.js') }}"></script>
 <!-- END: Page JS-->

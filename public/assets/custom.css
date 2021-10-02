@@ -48,7 +48,9 @@ a:hover {
     /*   background-color: #7367f0 !important;*/
     background-color: #00a4b1 !important;
 }
-
+.btn-sidebar.active{
+    background-color: #00a4b1 !important;
+}
 .btn-sidebar:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -317,16 +319,19 @@ td{
 /*End btns table*/
 
 /**/
+
 .tab-content .card {
   background-color: rgba(114, 103, 240, 0.3) !important;
+  background-color: transparent !important;
   color: rgb(223, 223, 223) !important;
 }
 .section-column-user{
     background-color: rgba(114, 103, 240, 0.3) !important;
     padding: 15px !important;
-
 }
-
+.nav-link.active{
+    color: white !important;
+}
 /*Table*/
 
 thead {
@@ -528,4 +533,40 @@ tbody {
 }
 .tr-card .td-img{
     padding: 15px !important;
+}
+
+/**/
+.col-flex-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#modal_adm_info .modal-body{
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+.links-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Links*/
+*{
+    transition: all .3s ease-in-out;
+}
+.small-info{
+    font-size: 10px;
+    margin-top: 10px;
+
+}
+.dominios-select{
+    transition: all .3s ease-in-out;
+}
+.dominios-select{
+    display: none;
+}
+.dominios-select.on{
+    display: block !important;
+    transition: all .3s ease-in-out;
 }

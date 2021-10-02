@@ -46,7 +46,7 @@
                         <thead>
                             <tr>
                                 <th>Nome</th>
-                                <th>Telefone</th>
+                                <th>Links</th>
                                 <th>Qnt de Clicks</th>
                                 <th>Opções</th>
                             </tr>
@@ -55,7 +55,12 @@
                             @foreach ($collaborators as $collaborator)
                                 <tr style="width:100%;">
                                     <td>{{ $collaborator->name ?? '' }}</td>
-                                    <td>{{ $collaborator->phone ?? 'sem email' }}</td>
+                                    <td>
+                                        <div class="links-column">
+                                            {{ $collaborator->phone ?? 'sem email' }} <br>
+                                            {{ $collaborator->phone ?? 'sem email' }}
+                                        </div>
+                                    </td>
                                     <td class="d-flex justify-content-center align-items-center">
                                         <h5 class="mr-1">{{ $collaborator->count }}</h5>
                                         <button class="ml-1 btn btn-outline-warning rounded-circle btn-icon"
