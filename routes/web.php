@@ -13,6 +13,7 @@ use App\Http\Controllers\CommissionsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ColaboradorController;
 use App\Http\Controllers\IntegrationController;
+use App\Http\Controllers\LinksController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -58,6 +59,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('integration', IntegrationController::class);
 
+    Route::resource('links', LinksController::class);
 
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
