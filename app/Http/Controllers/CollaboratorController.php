@@ -125,8 +125,20 @@ class CollaboratorController extends Controller
             ],
             [
                 'distribution' => $request->distribution
-            ]);
+            ]
+        );
 
         return redirect()->back();
+    }
+
+    public function resetClick($id)
+    {
+        $collaborator = Collaborator::find($id);
+        $collaborator->fill([
+            'count' => 0
+        ]);
+        $collaborator->save();
+
+        return response()->json(true);
     }
 }

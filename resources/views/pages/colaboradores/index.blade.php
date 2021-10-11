@@ -60,7 +60,7 @@
                                         <h5 class="mr-1">{{ $collaborator->count }}</h5>
                                         <button class="ml-1 btn btn-outline-warning rounded-circle btn-icon"
                                             data-toggle="tooltip" data-placement="top" title=""
-                                            data-original-title="Resetar Clicks" data-id="">
+                                            data-original-title="Resetar Clicks" data-id="" onclick="resetClick({{ $collaborator->id }})">
                                             <i data-feather='refresh-ccw'></i>
                                         </button>
                                     </td>
@@ -110,6 +110,20 @@
                     "_token": "{{ csrf_token() }}",
                 },
                 url: 'colaboradores/' + id,
+                success: function(response) {
+                    location.reload();
+                }
+            });
+        }
+
+        function resetClick(id) {
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                },
+                url: 'resetClick/' + id,
                 success: function(response) {
                     location.reload();
                 }
