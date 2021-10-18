@@ -47,12 +47,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'postgres://ucumcsnllhprtu:64ff48c2dc77859c94e3ce0e3fb6b311bce5ef520686d650335e6c2e4514f62c@ec2-3-226-165-74.compute-1.amazonaws.com:5432/d6ue624i9vg8nu',
-            'host' => 'ec2-3-226-165-74.compute-1.amazonaws.com',
-            'port' => '5432',
-            'database' => 'd6ue624i9vg8nu',
-            'username' => 'ucumcsnllhprtu',
-            'password' => '64ff48c2dc77859c94e3ce0e3fb6b311bce5ef520686d650335e6c2e4514f62c',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
